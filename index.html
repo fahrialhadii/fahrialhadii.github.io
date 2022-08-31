@@ -10,6 +10,9 @@
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -47,7 +50,7 @@
     <section class="jumbotron text-center">
       <img src="img/cool.jpg" alt="Foto Fachri" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Fachri Alhadi Ramadhan</h1>
-      <p class="lead">Daily Trader | Backend Web Dev</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -62,15 +65,15 @@
     <section id="about">
       <div class="container">
         <div class="row text-center mb-3">
-          <div class="col">
+          <div class="col" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
             <h2>About Me</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-5">
+          <div class="col-md-5" data-aos="fade-right" data-aos-delay="150" data-aos-duration="1000">
             <p>SAYA LAGI MALES NGENALIN DIRI, KALO DISEMANGATIN GA MALES LAGI KOK, HEHEHE KONTOL.</p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-5" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
             <p>TERIMAKASIH SUDAH BERKUNJUNG YA NJING, LOVE U DAH GITU AJA.</p>
           </div>
         </div>
@@ -89,13 +92,13 @@
     <section id="projects">
       <div class="container">
         <div class="row text-center mb-3">
-          <div class="col">
+          <div class="col" data-aos="zoom-in-down" data-aos-duration="1000">
             <h2>My Project</h2>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="1000">
               <img src="img/1933.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body m-auto">
                 <p class="card-text">Jangan Lupa HAKA</p>
@@ -103,7 +106,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
               <img src="img/1928.jpg" class="card-img-top" alt="Project 2" />
               <div class="card-body m-auto">
                 <p class="card-text">Jangan Lupa HAKA</p>
@@ -111,7 +114,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
               <img src="img/1926.jpg" class="card-img-top" alt="Project 3" />
               <div class="card-body m-auto">
                 <p class="card-text">Jangan Lupa HAKA</p>
@@ -119,7 +122,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="300">
               <img src="img/1924.jpg" class="card-img-top" alt="Project 4" />
               <div class="card-body m-auto">
                 <p class="card-text">Jangan Lupa HAKA</p>
@@ -127,7 +130,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="400">
               <img src="img/1919.jpg" class="card-img-top" alt="Project 5" />
               <div class="card-body m-auto">
                 <p class="card-text">Jangan Lupa HAKA</p>
@@ -200,6 +203,22 @@
     <!-- Akhir Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="nestedloop.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Daily Trader | Backend Web Dev" });
+      gsap.from(".jumbotron img", { duration: 1, y: -100, opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.7, ease: "back" });
+    </script>
 
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbyKmCkvH0R8-VvZi4_VwTZNGJNbbnH_W08GXSb0_QnSSb-3lNct0mHUBFOJr9F2YQGPOQ/exec";
